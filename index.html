@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+         <div class="header hero-container">
+                 <h1>Jackson<span>West</span></h1>
+                 <img class="show-on-mobile" id="open-nav" src="./images/menu.png">
+
+              <nav class="navbar" id="navbar">
+                 <ul>
+                     <li class="nav-item"><a href="#section0">Home</a></li>
+                     <li class="nav-item"><a href="#section1">About</a></li>
+                     <li class="nav-item"><a href="#section2">Education</a></li>
+                     <li class="nav-item"><a href="#section3">Projects</a></li>
+                     <li class="nav-item"><a href="#section4">Contact me</a></li>
+                 </ul>
+
+                 <img src="images/close.png" id="close-nav">
+                 <button class="resume-btn" id="resume-btn-nav">My resume</button>
+               </nav>              
+        </div>
+         <div class="hero-container container-intro-1" id="section0">
+             <img class="profile-image image-1" src="./images/image1.jpg">
+             <div class="intro-section">
+             <p class="intro-text">Hey Folks,<span>Myself Jackson West</span></p>
+             <p class="intro-para-1">I'm here to be associated with a dynamic and progressive organization that will allow me to utilize my abilities and qualifications in the field to add value to the organization while providing me with opportunities for growth.</p>
+             <button class="know-more-btn" id="know-more-btn">Know more<img src="./images/down-arrow.png"></button>     
+            </div>
+          
+            </div>
+            
+     
+         <section class="about-section hero-container" id="section1">
+            <h2 class="section-heading">About me</h2>
+             <div class="about-in-detail">
+             <!-- <img class="profile-image image-2" src="./images/shreyash2.jpeg"> -->
+             <div class="about-desc-section">
+             <p>I'm a student from NITK, seeking a challenging position in a reputed organization where I can learn new skills, expand my
+                knowledge, and leverage my learnings.</p>
+             <p>I Enjoy meeting new people and learning new technologies</p>
+             </div>
+            </div>
+            </section> 
+          <section class="skills hero-container" id="skills">
+             <h2 class="skills-head ">Languages and Databases I'm used to :</h2>
+             <ul class="lang">
+                 <li><img src="./images/clogo.png"></li>
+                 <li><img src="./images/cpplogo.png"></li>
+                 <li><img src="./images/pythonlogo.png"></li>
+                 <li><img src="./images/htmllogo.png"></li>
+                 <li><img src="./images/csslogo.png"></li>
+                 <li><img src="./images/jslogo.png"></li>
+                 <li><img src="./images/mysqllogo.png"></li>
+           
+               </ul> 
+             <h2>My Certifications :</h2>
+             <ul class="certifications">
+                 <li><img src="./images/pythondsalogo.png">
+                    <p>Data Structure and algorithms in python</p>
+                 </li>
+                 <li><img src="./images/webdevlogo.png">
+                    <p>Web Development by Udemy</p>
+                 </li>
+                 <li><img src="./images/deeplearninglogo.jpg">
+                    <p>Deep Learning by Coursera</p>
+                 </li>
+
+             </ul>             
+          </section>
+          <section class="education-section hero-container"id="section2">
+             <h1 class="section-heading">Education</h1>
+             <div class="education-tiles">
+             <div class="tile">
+                <h2>Pimpri Chinchwad College of Engineering, Pune</h2>
+                <h3>Degree: <span>Bachelors of Engineering in Computer Science</span></h3>
+                <h3 >Completed in: <span>2021</span></h3>
+                <h3>CGPA: <span>7.84</span></h3>
+               </div>       
+               <div class="tile">
+                  <h2>National Institute Of Technology Karnataka, Surathkal</h2>
+                  <h3>Degree: <span>M.Tech</span></h3>
+                  <h3>Currently Pursuing</h3>
+                 </div>
+               </div>
+            </section>
+          
+          <section class="projects hero-container" id="section3">
+              <h1 class="section-heading">My Projects</h1>
+              <ul>
+                <li>
+                   <img src="./images/project1.jpg">
+                   <p>Hospital management system using sql</p> 
+                </li>  
+                <li>
+                   <img src="./images/project2.jpg">
+                   <p>Automated Traffic light System using Computer vision and Image processing techniques</p> 
+                </li>  
+              </ul>
+
+              <!-- <p class="objective-text">Seeking a position as that will enhance my skills and offer security while aiding my professional growth and helping me contribute to the organization’s growth has always been my primary objective</p> -->
+          </section>     
+
+          <section class="contact-section hero-container" id="section4">
+             <h1 class="section-heading">Contact me</h1>
+             <div class="icons">
+             <p><img src="./images/call.png">+1656565656</p> 
+             <p><img src="./images/mail.png">jacks@westin.com</p> 
+             </div>
+             <button class="resume-btn" id="resume-btn">My Resume</button>
+            </section>
+        
+        
+        <script>
+           let resumeLink = '';
+           let knowMoreBtn = document.getElementById('know-more-btn');
+           let navbar = document.getElementById('navbar');
+           let closeBtn = document.getElementById('close-nav');
+           let openNav = document.getElementById('open-nav');
+           let navButton = document.getElementsByClassName('nav-item');
+           let resumeBtn = document.getElementById('resume-btn');
+           let resumeBtnNav = document.getElementById('resume-btn-nav');
+           let screen = document.body.clientWidth;
+           console.log(screen);
+
+           resumeBtnNav.addEventListener('click',()=>{
+             window.open(resumeLink);
+           });
+
+           resumeBtn.addEventListener('click',()=>{
+             window.open(resumeLink);
+           });
+
+           knowMoreBtn.addEventListener('click', ()=>{
+            document.getElementById("section1").scrollIntoView({behavior: 'smooth'})
+
+           });
+   
+           closeBtn.addEventListener('click',()=>{
+                navbar.style.animation="closeNavBar .5s forwards ease";
+               // navbar.style.visibility="hidden";   
+
+               });
+
+           openNav.addEventListener('click', ()=>{
+               navbar.style.animation="openNavBar .5s forwards ease";
+               navbar.style.visibility="visible";   
+            })            
+             console.log('less')
+             for(i=0;i<navButton.length;i++){
+               navButton[i].addEventListener('click',()=>{
+                  if(document.body.clientWidth<1030){
+                  
+                     navbar.style.animation="closeNavBar .5s forwards ease"; 
+                    }
+ 
+                })
+              }
+              window.addEventListener('resize',()=>{
+                 if(document.body.clientWidth>632){
+                  navbar.style.visibility="visible";
+                  console.log('efefewf')
+                 }
+              })
+            
+
+         //   
+
+
+        </script>
+    </body>
+</html>
